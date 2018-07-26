@@ -8,6 +8,13 @@ def initialize(id: nil, name:, breed:)
 end
 
 def self.create_table
+  sql = <<-SQL
+  CREATE TABLE dogs IF NOT EXISTS (
+    id INTEGER PRIMARY KEY,
+    name TEXT,
+    breed TEXT,
+  )  
+  SQL
 end
 
 
