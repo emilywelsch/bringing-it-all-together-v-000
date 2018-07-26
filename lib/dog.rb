@@ -1,6 +1,6 @@
 class Dog
 attr_accessor :name, :breed, :id
-DB = {:conn => SQLite3::Database.new("db/dogs.db")}
+# DB = {:conn => SQLite3::Database.new("db/dogs.db")}
 
 def initialize(id: nil, name:, breed:)
   @id = id
