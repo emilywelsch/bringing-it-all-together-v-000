@@ -70,6 +70,11 @@ class Dog
     end.first
   end
 
+  def self.create(name:, breed:)
+    dog = Dog.new(name: name, breed: breed)
+    dog.save
+    dog
+  end
 
   def self.update
     sql = "UPDATE dogs SET name = ?, breed = ?  WHERE id = ?"
