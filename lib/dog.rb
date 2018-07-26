@@ -1,6 +1,5 @@
 class Dog
   attr_accessor :name, :breed, :id
-  # DB = {:conn => SQLite3::Database.new("db/dogs.db")}
 
   def initialize(id: nil, name:, breed:)
     @id = id
@@ -39,9 +38,7 @@ class Dog
       else
         dog = self.create(name: name, breed: breed)
       end
-      dog
-    end
-
+    dog
   end
 
   def self.find_by_name(name)
